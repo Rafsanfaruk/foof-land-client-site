@@ -26,7 +26,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/statistics"
+                  to="/about"
                   className={({ isActive }) => (isActive ? "active" : "default")}
                 >
                  About
@@ -34,7 +34,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/statistics"
+                  to="/blog"
                   className={({ isActive }) => (isActive ? "active" : "default")}
                 >
                  Blog

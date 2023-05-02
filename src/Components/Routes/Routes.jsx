@@ -7,6 +7,8 @@ import PrivateRoutes from "./PrivateRoutes";
 import RecipeDetails from "../Pages/RecipeDetails/RecipeDetails";
 import Home from "../Pages/Home/Home";
 import Error from "../Error/Error";
+import About from "../Pages/About/About";
+import Blog from "../Pages/BLog/Blog";
 
 
 
@@ -41,6 +43,12 @@ const router = createBrowserRouter([
         },
         {
             path:'/about',
+            element:<About></About>
+         
+        },
+        {
+            path:'/blog',
+            element:<Blog></Blog>,
          
         }
         

@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Navbar section */}
-          <h1 className="text-3xl font-bold text-sky-500">FoodLand</h1>
+          <h1 className="text-3xl font-bold text-indigo-500">FoodLand</h1>
         
           <div className="flex lg:hidden">
             <button className="text-gray-400 hover:text-white focus:outline-none focus:text-white">

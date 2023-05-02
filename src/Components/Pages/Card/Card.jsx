@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SingleCard from "./SingleCard/SingleCard";
+import Gallery from "../Gallery/Gallery";
 
 const Card = () => {
   const [recipeData, setRecipeData] = useState([]);
@@ -35,6 +36,9 @@ const Card = () => {
 
             ))
          }
+      </div>
+      <div className="mt-14 mb-10">
+      <Gallery></Gallery>
       </div>
     </div>
   );

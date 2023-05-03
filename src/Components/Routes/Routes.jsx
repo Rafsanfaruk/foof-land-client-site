@@ -12,6 +12,7 @@ import SingleDataDetails from "../Pages/SingleDataDetails/SingleDataDetails";
 import CardDetails from "../Layouts/CardDetails";
 import SingleCard from "../Pages/Card/SingleCard/SingleCard";
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -56,7 +57,8 @@ const router = createBrowserRouter([
     
       {
         path: ":id",
-        element: <SingleDataDetails />,
+        element:<PrivateRoutes><SingleDataDetails /></PrivateRoutes>,
+        
         loader: ({ params }) => fetch(`http://localhost:5000/data/${params.id}`),
       },
     ],

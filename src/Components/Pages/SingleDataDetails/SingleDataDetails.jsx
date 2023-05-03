@@ -23,7 +23,7 @@ const SingleDataDetails = () => {
       <div className="flex flex-col lg:flex-row bg-base-100 shadow-xl">
         <div className="lg:w-1/2">
           <img
-            src={chefPicture}
+            src={Recipes_image}
             alt="Album"
             className="h-full w-full object-cover"
           />

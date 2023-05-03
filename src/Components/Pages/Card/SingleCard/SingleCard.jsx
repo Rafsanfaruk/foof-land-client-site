@@ -17,7 +17,7 @@ const SingleCard = ({ data }) => {
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
           <img
-            src={chefPicture}
+            src={Recipes_image}
             alt="Shoes"
             className="h-64 w-full object-cover"
           />

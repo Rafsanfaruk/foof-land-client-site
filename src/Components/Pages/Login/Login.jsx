@@ -1,8 +1,6 @@
-
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -15,7 +13,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    const from = location.state?.from?.pathname || "/category/0";
+    const from = location.state?.from?.pathname || "/home";
 
     signIn(email, password)
       .then((result) => {
@@ -23,8 +21,8 @@ const Login = () => {
         console.log(createdUser);
         navigate(from, { replace: true });
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        console.log(err);
       });
   };
 
@@ -34,7 +32,10 @@ const Login = () => {
         <h3 className="text-2xl font-bold mb-6 text-center">Please Login</h3>
         <form onSubmit={handleLogin}>
           <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+            <label
+              className="block text-gray-700 font-bold mb-2"
+              htmlFor="email"
+            >
               Email address
             </label>
             <input
@@ -47,7 +48,10 @@ const Login = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="password">
+            <label
+              className="block text-gray-700 font-bold mb-2"
+              htmlFor="password"
+            >
               Password
             </label>
             <input
@@ -66,7 +70,7 @@ const Login = () => {
             </label>
           </div>
           <div className="flex items-center justify-between">
-            <button
+          <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
@@ -80,7 +84,13 @@ const Login = () => {
             </Link>
           </div>
         </form>
+        <h2 className="mt-3 text-xl">Or login</h2>
+        <div className="flex mt-5 gap-2">
+        <button className="btn btn-outline btn-primary">Google</button>
+        <button className="btn btn-outline btn-secondary">Github</button>
       </div>
+      </div>
+      
     </div>
   );
 };

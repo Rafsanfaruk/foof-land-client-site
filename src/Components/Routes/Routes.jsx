@@ -9,58 +9,58 @@ import Error from "../Error/Error";
 import About from "../Pages/About/About";
 import Blog from "../Pages/BLog/Blog";
 import SingleDataDetails from "../Pages/SingleDataDetails/SingleDataDetails";
-
-
+import CardDetails from "../Layouts/CardDetails";
+import SingleCard from "../Pages/Card/SingleCard/SingleCard";
 
 const router = createBrowserRouter([
-    // {
-    //     path:'/',
-    //     element:<LoginLayout></LoginLayout>,
-    //     children:[
-          
-    //       {
-    //         path:'/login',
-    //         element:<Login></Login>
-    //       },
-    //       {
-    //         path:'/register',
-    //         element:<Register></Register>
-    //       },
-         
-    //     ]
-    // },
-  
   {
-      path: "/",
-      element: <Main></Main>,
-      errorElement: <Error></Error>,
-      children:[
+    path: '/',
+    element: <LoginLayout>
 
-        {
-            path:'/',
-            element:<Home></Home>
-            
-        },
-        {
-            path:'/about',
-            element:<About></About>
-         
-        },
-        {
-            path:'/blog',
-            element:<Blog></Blog>,
-         
-        },
-        {
-          path:':id',
-          element:<SingleDataDetails></SingleDataDetails>,
-          
-        }
-        
-        
-      ],
-    },
+    </LoginLayout>,
+    children: [
+      {
+        path: '/login',
+        element: <Login />
+      },
+      {
+        path: '/register',
+        element: <Register />
+      },
+    ]
+  },
+  {
+    path: "/",
+    element: <Main />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/home",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+    ],
+  },
+  {
+    path: "/card",
+    element: <CardDetails></CardDetails>,
+    children: [
+      
     
-  ]);
+      {
+        path: ":id",
+        element: <SingleDataDetails />,
+        loader: ({ params }) => fetch(`http://localhost:5000/data/${params.id}`),
+      },
+    ],
+  },
+]);
 
-  export default router;
+export default router;

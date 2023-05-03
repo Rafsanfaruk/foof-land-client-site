@@ -18,7 +18,7 @@ const Navbar = () => {
             <ul className="flex space-x-8">
               <li>
                 <NavLink
-                  to="/"
+                  to="/home"
                   className={({ isActive }) => (isActive ? "active" : "default")}
                 >
                   Home

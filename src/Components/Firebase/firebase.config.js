@@ -4,13 +4,16 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+console.log('environment variables', import.meta.env.VITE_apiKey);
+
 const firebaseConfig = {
-  apiKey: "AIzaSyB5uWWHmYtyvyvjw1Bti0f2OfvpIJa4cn8",
-  authDomain: "foodland-for-ass-with-firebase.firebaseapp.com",
-  projectId: "foodland-for-ass-with-firebase",
-  storageBucket: "foodland-for-ass-with-firebase.appspot.com",
-  messagingSenderId: "931003756724",
-  appId: "1:931003756724:web:6926fcbe2f7632c85927e1"
+  apiKey: import.meta.env.VITE_APIKEY ,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN ,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET ,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID ,
+  appId:import.meta.env.VITE_APPID ,
 };
 
 // Initialize Firebase

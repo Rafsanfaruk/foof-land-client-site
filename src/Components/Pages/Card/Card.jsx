@@ -6,7 +6,7 @@ const Card = () => {
   const [recipeData, setRecipeData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/data")
+    fetch("https://b7a10-chef-recipe-hunter-server-side-rafsanfaruk-rafsanfaruk.vercel.app/data")
       .then((res) => res.json())
       .then((data) => setRecipeData(data))
       .catch((err) => console.log(err));

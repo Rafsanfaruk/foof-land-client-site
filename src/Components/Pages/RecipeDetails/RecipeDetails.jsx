@@ -9,7 +9,7 @@
 // //   const { id } = useParams();
 
 // //   useEffect(() => {
-// //     fetch(`http://localhost:5000/data/${id}`)
+// //     fetch(`https://b7a10-chef-recipe-hunter-server-side-rafsanfaruk-rafsanfaruk.vercel.app/data/${id}`)
 // //       .then((res) => res.json())
 // //       .then((data) => setAllData(data))
 // //       .catch((err) => console.log(err));
